@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import InsertDescriptionField from '../../components/DescriptionRequestComponent';
 import InsertEmailField from '../../components/EmailComponent';
 import SuffixDropdownList from '../../components/SuffixDropdownListComponent';
 import './App.css';
@@ -6,10 +7,15 @@ import './App.css';
 function App() {
 
    const [email, setEmail] = useState("");
+   const [descriptionRequest, setDescriptionRequest] = useState('');
 
    const onEmailChange = (event) => {
      setEmail(event.target.value);
    };
+   
+   const onDescriptionRequestChange =(event)=>{
+      setDescriptionRequest(event.target.value);
+   }
    
   return (
     <div className="App">
@@ -18,11 +24,16 @@ function App() {
       </header>
 
       <div className="contact-form-main-container">
-        <InsertEmailField email={email} handleEmailChange={onEmailChange} />
-        <SuffixDropdownList/>
-        <div className="request-description-container">
-          <input type="text" label="request-description" value=""></input>
-        </div>
+        <InsertEmailField 
+        email={email} 
+        handleEmailChange={onEmailChange} 
+        />
+        <SuffixDropdownList />
+        <InsertDescriptionField
+          descriptionRequest={descriptionRequest}
+          handleDescriptionRequestChange = {onDescriptionRequestChange}
+        />
+
         <div className="submit-request-button">
           <button> Submit </button>
         </div>
