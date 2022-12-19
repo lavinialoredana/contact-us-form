@@ -1,9 +1,8 @@
-const SuffixDropdownList = () =>{
-    return(
-
-        <div className="suffix-dropdown-list">
+const SuffixDropdownList = () => {
+  return (
+    <div className="suffix-dropdown-list">
       <select name="" id="">
-        <option selected disabled hidden>
+        <option>
           Select an option
         </option>
         <option>Mr.</option>
@@ -11,7 +10,7 @@ const SuffixDropdownList = () =>{
         <option> Miss</option>
       </select>
     </div>
-        )
-}
+  );
+};
 
 export default SuffixDropdownList;

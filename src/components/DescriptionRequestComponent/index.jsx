@@ -6,8 +6,9 @@ const InsertDescriptionField = ({
     console.log("onDescriptionRequest", descriptionRequest);
   return (
     <div className="request-description-container">
-      <input
-        type="text"
+      <textarea
+        rows="4"
+        cols="50"
         label="request-description"
         value={descriptionRequest}
         onChange={handleDescriptionRequestChange}

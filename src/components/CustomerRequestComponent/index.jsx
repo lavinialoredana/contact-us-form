@@ -1,5 +1,5 @@
-const InsertEmailField = ({ email, handleEmailChange }) => {
-    console.log("my email", email);
+const EmailField = ({ email, handleEmailChange }) => {
+  console.log("my email", email);
   return (
     <div className="email-container">
       <input
@@ -12,4 +12,4 @@ const InsertEmailField = ({ email, handleEmailChange }) => {
   );
 };
 
-export default InsertEmailField;
+export default EmailField;
