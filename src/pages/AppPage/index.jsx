@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import InsertEmailField from '../../components/EmailComponent';
+import SuffixDropdownList from '../../components/SuffixDropdownListComponent';
 import './App.css';
 
 function App() {
@@ -17,26 +18,11 @@ function App() {
       </header>
 
       <div className="contact-form-main-container">
-        <InsertEmailField 
-        email={email}
-        handleEmailChange = {onEmailChange}
-        />
-
-        <div className="suffix-dropdown-list">
-          <select name="" id="">
-            <option selected disabled hidden>
-              Select an option
-            </option>
-            <option>Mr.</option>
-            <option> Mrs.</option>
-            <option> Miss</option>
-          </select>
-        </div>
-
+        <InsertEmailField email={email} handleEmailChange={onEmailChange} />
+        <SuffixDropdownList/>
         <div className="request-description-container">
           <input type="text" label="request-description" value=""></input>
         </div>
-
         <div className="submit-request-button">
           <button> Submit </button>
         </div>
