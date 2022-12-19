@@ -1,7 +1,15 @@
 import { useState } from 'react';
+import InsertEmailField from '../../components/EmailComponent';
 import './App.css';
 
 function App() {
+
+   const [email, setEmail] = useState("");
+
+   const onEmailChange = (event) => {
+     setEmail(event.target.value);
+   };
+   
   return (
     <div className="App">
       <header className="App-header">
@@ -9,13 +17,10 @@ function App() {
       </header>
 
       <div className="contact-form-main-container">
-        <div className="email-container">
-          <input 
-          type="text" 
-          label="E-mail" 
-          value=''
-          />
-        </div>
+        <InsertEmailField 
+        email={email}
+        handleEmailChange = {onEmailChange}
+        />
 
         <div className="suffix-dropdown-list">
           <select name="" id="">
