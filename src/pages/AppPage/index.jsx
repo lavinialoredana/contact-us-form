@@ -1,11 +1,12 @@
 import { useState } from "react";
-import InsertDescriptionField from "../../components/DescriptionRequestComponent";
-import EmailField from "../../components/CustomerRequestComponent";
-import SubmitButton from "../../components/SubmitRequestButtonComponent";
+import InsertDescriptionField from "../../components/Description";
+import EmailField from "../../components/CustomerEmail";
+import SubmitButton from "../../components/SubmitButton";
 import SuffixDropdownList from "../../components/SuffixDropdownListComponent";
 import "./app.css";
 import { v4 as uuidv4 } from "uuid";
-import CustomerRequest from "../../components/EmailAndDescriptionRequestListComponent";
+import CustomerMessage from "../../components/EmailAndDescriptionMessageList";
+
 
 function App() {
   const [email, setEmail] = useState("");
@@ -49,7 +50,7 @@ function App() {
           handleDescriptionRequestChange={onDescriptionRequestChange}
         />
         <SubmitButton handleSubmitRequestClick={onSubmitRequestClick} />
-        <CustomerRequest
+        <CustomerMessage
           emailAndDescriptionRequestList={emailAndDescriptionRequestList}
         />
       </div>

@@ -1,4 +1,4 @@
-const CustomerRequest = ({ emailAndDescriptionRequestList }) => {
+const CustomerMessage = ({ emailAndDescriptionRequestList }) => {
   return emailAndDescriptionRequestList.map((request) => {
     return (
       <div className="customer-request-container" key={request.id}>
@@ -11,4 +11,4 @@ const CustomerRequest = ({ emailAndDescriptionRequestList }) => {
     );
   });
 };
-export default CustomerRequest;
+export default CustomerMessage;
